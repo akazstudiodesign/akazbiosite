@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AKAZ STUDIO | Identidade visual, naming e redes sociais</title>
+<meta name="description" content="Designer gráfica especialista em identidade visual, naming e redes sociais. Mais de 10 anos criando marcas para serem lembradas.">
+<meta name="theme-color" content="#ebe7de">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== Cores e fontes (mesmas do site principal) ===== */
+:root{
+  --paper:#ebe7de; --ink:#1c2b10; --mute:#5b6348; --card:#f6f3ed; --line:#d6d1c4;
+  --accent:#ff6633; --on-accent:#1c2b10;
+  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --f-body:"DM Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#1c2b10; --ink:#ebe7de; --mute:#a9ae96; --card:#26381a; --line:#3a4e2a}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100svh;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--f-body)}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+.page{
+  max-width:480px;margin:0 auto;
+  padding:calc(36px + env(safe-area-inset-top,0px)) 20px calc(36px + env(safe-area-inset-bottom,0px));
+  display:grid;gap:28px;
+}
+
+/* ===== Cabeçalho ===== */
+.head{text-align:center;display:grid;justify-items:center;gap:18px}
+.mark{width:64px;height:64px;background:var(--accent);border-radius:50% 50% 50% 0;transform:rotate(-8deg)}
+.brand{font:800 18px var(--f-display);letter-spacing:.14em}
+.head h1{font:800 clamp(38px,11vw,52px)/1 var(--f-display);letter-spacing:-.04em}
+.head p{color:var(--mute);max-width:34ch}
+.tag{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font:700 14px var(--f-display)}
+
+/* ===== Botões principais ===== */
+.cta{display:grid;gap:12px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:58px;padding:0 24px;border-radius:999px;font:700 18px var(--f-display);transition:transform .15s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.ghost{border:2px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* ===== Autoridade ===== */
+.proof{background:#1c2b10;color:#ebe7de;border-radius:28px;padding:28px;display:flex;align-items:center;gap:20px}
+.proof b{font:800 64px/1 var(--f-display);letter-spacing:-.04em;color:var(--accent)}
+.proof p{font-size:16px}
+
+/* ===== Soluções ===== */
+.sec h2{font:800 28px/1.05 var(--f-display);letter-spacing:-.03em;margin-bottom:14px}
+.svc{display:grid;gap:10px}
+.svc a{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px 20px;transition:transform .2s,border-color .2s}
+.svc a:hover{transform:translateY(-3px);border-color:var(--accent)}
+.svc strong{display:block;font:800 20px/1.1 var(--f-display);letter-spacing:-.02em}
+.svc span{color:var(--mute);font-size:15px}
+.svc i{font-style:normal;font:700 22px var(--f-display);color:var(--accent)}
+
+/* ===== Atalhos de contato e redes ===== */
+.links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.links a{display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px 18px;font:700 16px var(--f-display);transition:background .2s,transform .2s}
+.links a:hover{background:var(--accent);color:var(--on-accent);border-color:var(--accent);transform:translateY(-3px)}
+.links a:last-child:nth-child(odd){grid-column:1/-1}
+.links a.wide{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between}
+.links svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.links em{font:700 20px/1 var(--f-display);font-style:normal;letter-spacing:-.04em}
+
+footer{text-align:center;color:var(--mute);font-size:14px}
+
+/* ===== Entrada suave ===== */
+@media (prefers-reduced-motion:no-preference){
+  .page>*{animation:up .6s both}
+  .page>*:nth-child(2){animation-delay:.08s}.page>*:nth-child(3){animation-delay:.16s}
+  .page>*:nth-child(4){animation-delay:.24s}.page>*:nth-child(5){animation-delay:.32s}
+  @keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- 1. CABEÇALHO E BIO -->
+  <header class="head">
+    <div class="mark" aria-hidden="true"></div>
+    <div class="brand">AKAZ STUDIO</div>
+    <h1>Sua marca merece ser lembrada.</h1>
+    <p>Identidades visuais, nomes e presença nas redes sociais para marcas que querem ser reconhecidas à primeira vista.</p>
+    <span class="tag">Designer gráfica · Identidade visual e naming</span>
+  </header>
+
+  <!-- 2. BOTÕES PRINCIPAIS
+       Troque o endereço do site principal quando o domínio akazstudio.com estiver no ar -->
+  <nav class="cta" aria-label="Ações principais">
+    <a class="btn primary" href="https://superlative-maamoul-a4d31d.netlify.app/#proposta">Solicitar proposta</a>
+    <!-- Desativado por enquanto (para reativar, apague esta linha e a de fechamento):
+    <a class="btn ghost" href="https://superlative-maamoul-a4d31d.netlify.app/#work">Explorar projetos recentes</a>
+    -->
+  </nav>
+
+  <!-- 3. AUTORIDADE -->
+  <section class="proof" aria-label="Experiência">
+    <b>+10</b>
+    <p>anos criando marcas para pequenos negócios e empresas em expansão, do primeiro nome ao manual de uso.</p>
+  </section>
+
+  <!-- 3. SOLUÇÕES -->
+  <section class="sec">
+    <h2>Como posso ajudar</h2>
+    <div class="svc">
+      <a href="https://superlative-maamoul-a4d31d.netlify.app/#work"><div><strong>Identidade visual</strong><span>Logo, cores, tipografia e manual</span></div><i aria-hidden="true">→</i></a>
+      <a href="https://superlative-maamoul-a4d31d.netlify.app/#work"><div><strong>Naming</strong><span>Nomes que contam a história da marca</span></div><i aria-hidden="true">→</i></a>
+      <a href="https://superlative-maamoul-a4d31d.netlify.app/#work"><div><strong>Redes sociais</strong><span>Feeds, campanhas e templates</span></div><i aria-hidden="true">→</i></a>
+    </div>
+  </section>
+
+  <!-- 4. CONTATOS E REDES -->
+  <section class="sec">
+    <h2>Fale comigo</h2>
+    <div class="links">
+      <a href="https://wa.me/5581982039686?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20conversar%20sobre%20a%20minha%20marca." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 20.5l1.4-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2.2-1-.9.8c-1-.4-1.9-1.300-2.300-2.300l.8-.9-1-2.200z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:ola@akazstudio.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
+        E-mail
+      </a>
+      <a href="https://www.instagram.com/akaz.studio/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></svg>
+        Instagram
+      </a>
+      <!-- Desativados por enquanto: Behance e site principal. Para reativar, mova-os para fora deste comentário e troque o link do Behance pelo seu perfil.
+      <a href="https://www.behance.net/" target="_blank" rel="noopener">
+        <em aria-hidden="true">Bē</em>
+        Behance
+      </a>
+      <a class="wide" href="https://superlative-maamoul-a4d31d.netlify.app/" target="_blank" rel="noopener">
+        <span>Visitar o site principal</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+      </a>
+      -->
+    </div>
+  </section>
+
+  <footer>© 2026 AKAZ STUDIO</footer>
+</main>
+</body>
+</html>
