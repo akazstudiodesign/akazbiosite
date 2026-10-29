@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AKAZ STUDIO | Identidade visual, naming e redes sociais</title>
 <meta name="description" content="Designer gráfico especialista em identidade visual, naming e redes sociais. Mais de 7 anos criando marcas para serem lembradas.">
-
+ 
 <!-- Celulares: barra de status, tema e comportamento no iOS e no Android -->
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ebe7de" media="(prefers-color-scheme: light)">
@@ -14,14 +14,14 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="AKAZ STUDIO">
 <meta name="format-detection" content="telephone=no">
-
+ 
 <!-- Pré-visualização ao compartilhar no WhatsApp, Instagram e redes.
      Para exibir uma imagem, adicione: <meta property="og:image" content="https://SEU-ENDEREÇO/imagem.jpg"> (1200 x 630 px) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="AKAZ STUDIO | Sua marca merece ser lembrada">
 <meta property="og:description" content="Identidade visual, naming e redes sociais para marcas que querem ser reconhecidas à primeira vista.">
-
+ 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 29V16a13 13 0 1 1 13 13z' fill='%23ff6633'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@ body{
 a{color:inherit;text-decoration:none;touch-action:manipulation}
 h1,h2,h3,p{margin:0}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-
+ 
 /* ===== Estrutura (pensada primeiro para o celular) ===== */
 .page{
   max-width:480px;margin:0 auto;display:grid;gap:28px;
@@ -56,7 +56,7 @@ h1,h2,h3,p{margin:0}
   padding-left:max(20px,env(safe-area-inset-left,0px));
   padding-bottom:calc(120px + env(safe-area-inset-bottom,0px)); /* espaço para a barra fixa */
 }
-
+ 
 /* ===== Cabeçalho ===== */
 .head{text-align:center;display:grid;justify-items:center;gap:16px}
 .mark{width:64px;height:64px;background:var(--accent);border-radius:50% 50% 50% 0;transform:rotate(-8deg)}
@@ -64,7 +64,7 @@ h1,h2,h3,p{margin:0}
 .head h1{font:800 clamp(38px,12vw,52px)/1 var(--f-display);letter-spacing:-.04em;text-wrap:balance}
 .head p{color:var(--mute);max-width:34ch;text-wrap:balance}
 .tag{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font:700 14px var(--f-display)}
-
+ 
 /* ===== Botões principais ===== */
 .cta{display:grid;gap:12px}
 .btn{
@@ -74,12 +74,12 @@ h1,h2,h3,p{margin:0}
 .btn.primary{background:var(--accent);color:var(--on-accent)}
 .btn.ghost{border:2px solid var(--ink)}
 .btn:active{transform:scale(.97)}
-
+ 
 /* ===== Autoridade ===== */
 .proof{background:#1c2b10;color:#ebe7de;border-radius:28px;padding:26px 24px;display:flex;align-items:center;gap:18px}
 .proof b{font:800 60px/1 var(--f-display);letter-spacing:-.04em;color:var(--accent)}
 .proof p{font-size:16px}
-
+ 
 /* ===== Soluções ===== */
 .sec h2{font:800 28px/1.05 var(--f-display);letter-spacing:-.03em;margin-bottom:14px}
 .svc{display:grid;gap:10px}
@@ -90,7 +90,7 @@ h1,h2,h3,p{margin:0}
 }
 .svc strong{display:block;font:800 20px/1.1 var(--f-display);letter-spacing:-.02em}
 .svc span{display:block;margin-top:6px;color:var(--mute);font-size:15px;line-height:1.35}
-
+ 
 /* ===== Contatos e redes ===== */
 .links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .links a{
@@ -104,7 +104,7 @@ h1,h2,h3,p{margin:0}
 .links svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .links em{font:700 22px/1 var(--f-display);font-style:normal;letter-spacing:-.04em}
 footer{text-align:center;color:var(--mute);font-size:14px}
-
+ 
 /* ===== Barra fixa de ação (aparece ao rolar, na zona do polegar) ===== */
 .dock{
   position:fixed;left:0;right:0;bottom:0;z-index:10;
@@ -114,27 +114,27 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 }
 .dock.on{transform:none;visibility:visible}
 .dock .btn{max-width:480px;margin:0 auto}
-
+ 
 /* ===== Efeito de passar o mouse: só em dispositivos com mouse ===== */
 @media (hover:hover){
   .btn:hover{transform:translateY(-2px)}
   .btn.ghost:hover{background:var(--ink);color:var(--paper)}
   .links a:hover{background:var(--accent);color:var(--on-accent);border-color:var(--accent);transform:translateY(-3px)}
 }
-
+ 
 /* ===== Computador: o conteúdo vira um "cartão" central, no formato de celular ===== */
 @media (min-width:700px){
   body{background:var(--card)}
   .page{margin:40px auto;padding:48px 32px 40px;background:var(--paper);border:1px solid var(--line);border-radius:40px}
   .dock{display:none}
 }
-
+ 
 /* ===== Celulares pequenos ===== */
 @media (max-width:360px){
   .proof{flex-direction:column;align-items:flex-start}
   .links a{padding:14px}
 }
-
+ 
 /* ===== Entrada suave ===== */
 @media (prefers-reduced-motion:no-preference){
   .page>*{animation:up .6s both}
@@ -146,7 +146,7 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 </head>
 <body>
 <main class="page">
-
+ 
   <!-- 1. CABEÇALHO E BIO -->
   <header class="head">
     <div class="mark" aria-hidden="true"></div>
@@ -155,7 +155,7 @@ footer{text-align:center;color:var(--mute);font-size:14px}
     <p>Identidades visuais, nomes e presença nas redes sociais para marcas que querem ser reconhecidas à primeira vista.</p>
     <span class="tag">Designer Gráfico · Identidade visual e naming</span>
   </header>
-
+ 
   <!-- 2. BOTÕES PRINCIPAIS
        Troque o endereço do site principal quando o domínio akazstudio.com estiver no ar -->
   <nav class="cta" aria-label="Ações principais">
@@ -164,13 +164,13 @@ footer{text-align:center;color:var(--mute);font-size:14px}
     <a class="btn ghost" href="https://superlative-maamoul-a4d31d.netlify.app/#work">Explorar projetos recentes</a>
     -->
   </nav>
-
+ 
   <!-- 3. AUTORIDADE -->
   <section class="proof" aria-label="Experiência">
     <b>+7</b>
     <p>anos criando marcas para pequenos negócios e empresas em expansão, do primeiro nome ao manual de uso.</p>
   </section>
-
+ 
   <!-- 3. SOLUÇÕES -->
   <section class="sec">
     <h2>Como posso ajudar</h2>
@@ -180,7 +180,7 @@ footer{text-align:center;color:var(--mute);font-size:14px}
       <div class="item"><div><strong>Redes sociais</strong><span>Feeds com identidade e propósito. Direção de arte, campanhas e templates que fazem a sua marca ser reconhecida e lembrada a cada publicação.</span></div></div>
     </div>
   </section>
-
+ 
   <!-- 4. CONTATOS E REDES -->
   <section class="sec">
     <h2>Fale comigo</h2>
@@ -209,15 +209,15 @@ footer{text-align:center;color:var(--mute);font-size:14px}
       -->
     </div>
   </section>
-
+ 
   <footer>© 2026 AKAZ STUDIO</footer>
 </main>
-
+ 
 <!-- Barra fixa: aparece quando o botão principal sai da tela -->
 <div class="dock" id="dock">
   <a class="btn primary" href="https://wa.me/5581982039686?text=Ol%C3%A1!%20Vim%20pelo%20bio-site%20da%20AKAZ%20STUDIO%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicitar proposta</a>
 </div>
-
+ 
 <script>
 (function(){
   var b=document.getElementById("cta-main"),d=document.getElementById("dock");
@@ -227,3 +227,4 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 </script>
 </body>
 </html>
+ 
