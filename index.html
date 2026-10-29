@@ -7,9 +7,8 @@
 <meta name="description" content="Designer gráfico especialista em identidade visual, naming e redes sociais. Mais de 7 anos criando marcas para serem lembradas.">
 
 <!-- Celulares: barra de status, tema e comportamento no iOS e no Android -->
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#ebe7de" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1c2b10" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ebe7de">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="AKAZ STUDIO">
@@ -29,13 +28,11 @@
 <style>
 /* ===== Cores e fontes (as mesmas do site principal) ===== */
 :root{
+  color-scheme:light;
   --paper:#ebe7de; --ink:#1c2b10; --mute:#5b6348; --card:#f6f3ed; --line:#d6d1c4;
   --accent:#ff6633; --on-accent:#1c2b10;
   --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --f-body:"DM Sans","Helvetica Neue",Arial,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--paper:#1c2b10; --ink:#ebe7de; --mute:#a9ae96; --card:#26381a; --line:#3a4e2a}
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--paper);-webkit-tap-highlight-color:transparent}
