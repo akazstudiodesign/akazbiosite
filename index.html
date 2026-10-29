@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AKAZ STUDIO | Identidade visual, naming e redes sociais</title>
 <meta name="description" content="Designer gráfico especialista em identidade visual, naming e redes sociais. Mais de 7 anos criando marcas para serem lembradas.">
- 
+
 <!-- Celulares: barra de status, tema e comportamento no iOS e no Android -->
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ebe7de" media="(prefers-color-scheme: light)">
@@ -14,18 +14,18 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="AKAZ STUDIO">
 <meta name="format-detection" content="telephone=no">
- 
+
 <!-- Pré-visualização ao compartilhar no WhatsApp, Instagram e redes.
      Para exibir uma imagem, adicione: <meta property="og:image" content="https://SEU-ENDEREÇO/imagem.jpg"> (1200 x 630 px) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="AKAZ STUDIO | Sua marca merece ser lembrada">
 <meta property="og:description" content="Identidade visual, naming e redes sociais para marcas que querem ser reconhecidas à primeira vista.">
- 
+
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M3 29V16a13 13 0 1 1 13 13z' fill='%23ff6633'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ===== Cores e fontes (as mesmas do site principal) ===== */
 :root{
@@ -47,7 +47,7 @@ body{
 a{color:inherit;text-decoration:none;touch-action:manipulation}
 h1,h2,h3,p{margin:0}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
- 
+
 /* ===== Estrutura (pensada primeiro para o celular) ===== */
 .page{
   max-width:480px;margin:0 auto;display:grid;gap:28px;
@@ -56,15 +56,17 @@ h1,h2,h3,p{margin:0}
   padding-left:max(20px,env(safe-area-inset-left,0px));
   padding-bottom:calc(120px + env(safe-area-inset-bottom,0px)); /* espaço para a barra fixa */
 }
- 
+
 /* ===== Cabeçalho ===== */
-.head{text-align:center;display:grid;justify-items:center;gap:16px}
-.mark{width:64px;height:64px;background:var(--accent);border-radius:50% 50% 50% 0;transform:rotate(-8deg)}
-.brand{font:800 18px var(--f-display);letter-spacing:.14em}
-.head h1{font:800 clamp(38px,12vw,52px)/1 var(--f-display);letter-spacing:-.04em;text-wrap:balance}
+.head{text-align:center;display:grid;justify-items:center;gap:18px}
+.logo{display:block;width:clamp(150px,48vw,210px);height:auto;margin:0 auto 14px;color:var(--ink)}
+.head h1{justify-self:stretch;margin:0 -12px;line-height:0}
+.hl{display:block;width:100%;height:auto;overflow:visible;color:var(--ink)}
+.hl text{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;font-weight:800;font-stretch:75%;font-size:38.5px;fill:currentColor}
+.hl .sym{fill:var(--accent)}
 .head p{color:var(--mute);max-width:34ch;text-wrap:balance}
 .tag{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font:700 14px var(--f-display)}
- 
+
 /* ===== Botões principais ===== */
 .cta{display:grid;gap:12px}
 .btn{
@@ -74,12 +76,12 @@ h1,h2,h3,p{margin:0}
 .btn.primary{background:var(--accent);color:var(--on-accent)}
 .btn.ghost{border:2px solid var(--ink)}
 .btn:active{transform:scale(.97)}
- 
+
 /* ===== Autoridade ===== */
 .proof{background:#1c2b10;color:#ebe7de;border-radius:28px;padding:26px 24px;display:flex;align-items:center;gap:18px}
-.proof b{font:800 60px/1 var(--f-display);letter-spacing:-.04em;color:var(--accent)}
-.proof p{font-size:16px}
- 
+.proof b{font:800 40px/1 var(--f-display);letter-spacing:-.04em;color:var(--accent)}
+.proof p{font-size:15px;line-height:1.5}
+
 /* ===== Soluções ===== */
 .sec h2{font:800 28px/1.05 var(--f-display);letter-spacing:-.03em;margin-bottom:14px}
 .svc{display:grid;gap:10px}
@@ -90,7 +92,7 @@ h1,h2,h3,p{margin:0}
 }
 .svc strong{display:block;font:800 20px/1.1 var(--f-display);letter-spacing:-.02em}
 .svc span{display:block;margin-top:6px;color:var(--mute);font-size:15px;line-height:1.35}
- 
+
 /* ===== Contatos e redes ===== */
 .links{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .links a{
@@ -104,7 +106,7 @@ h1,h2,h3,p{margin:0}
 .links svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .links em{font:700 22px/1 var(--f-display);font-style:normal;letter-spacing:-.04em}
 footer{text-align:center;color:var(--mute);font-size:14px}
- 
+
 /* ===== Barra fixa de ação (aparece ao rolar, na zona do polegar) ===== */
 .dock{
   position:fixed;left:0;right:0;bottom:0;z-index:10;
@@ -114,27 +116,27 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 }
 .dock.on{transform:none;visibility:visible}
 .dock .btn{max-width:480px;margin:0 auto}
- 
+
 /* ===== Efeito de passar o mouse: só em dispositivos com mouse ===== */
 @media (hover:hover){
   .btn:hover{transform:translateY(-2px)}
   .btn.ghost:hover{background:var(--ink);color:var(--paper)}
   .links a:hover{background:var(--accent);color:var(--on-accent);border-color:var(--accent);transform:translateY(-3px)}
 }
- 
+
 /* ===== Computador: o conteúdo vira um "cartão" central, no formato de celular ===== */
 @media (min-width:700px){
   body{background:var(--card)}
   .page{margin:40px auto;padding:48px 32px 40px;background:var(--paper);border:1px solid var(--line);border-radius:40px}
   .dock{display:none}
 }
- 
+
 /* ===== Celulares pequenos ===== */
 @media (max-width:360px){
   .proof{flex-direction:column;align-items:flex-start}
   .links a{padding:14px}
 }
- 
+
 /* ===== Entrada suave ===== */
 @media (prefers-reduced-motion:no-preference){
   .page>*{animation:up .6s both}
@@ -146,16 +148,15 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 </head>
 <body>
 <main class="page">
- 
+
   <!-- 1. CABEÇALHO E BIO -->
   <header class="head">
-    <div class="mark" aria-hidden="true"></div>
-    <div class="brand">AKAZ STUDIO</div>
-    <h1>Sua marca merece ser lembrada.</h1>
+    <svg class="logo" viewBox="218.6 83.2 173 33" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AKAZ STUDIO" fill="currentColor"><path d="M 229.2 110.2 C 229.8 108.6 230.1 106.3 230.1 103.1 C 230.1 100.5 230.0 98.5 229.8 97.0 C 229.5 95.5 229.2 94.4 228.6 93.7 C 228.1 93.1 227.4 92.8 226.5 92.8 C 225.2 92.8 224.2 93.6 223.6 95.2 C 223.0 96.8 222.7 99.3 222.7 102.6 C 222.7 106.0 223.0 108.5 223.7 110.1 C 224.3 111.7 225.3 112.5 226.5 112.5 C 227.6 112.5 228.5 111.7 229.2 110.2 M 222.3 114.3 C 221.3 113.4 220.5 111.9 219.9 110.0 C 219.4 108.1 219.1 105.7 219.1 102.8 C 219.1 98.3 219.7 94.9 220.9 92.8 C 222.1 90.7 223.6 89.6 225.5 89.6 C 226.7 89.6 227.6 90.0 228.3 90.8 C 228.9 91.5 229.4 92.5 229.6 93.6 L 230.1 93.6 L 230.1 90.6 C 230.1 90.4 230.1 90.2 230.2 90.2 C 230.3 90.1 230.4 90.1 230.6 90.1 L 233.1 90.1 C 233.3 90.1 233.4 90.1 233.5 90.2 C 233.6 90.2 233.6 90.4 233.6 90.6 L 233.6 114.5 C 233.6 114.7 233.6 114.9 233.5 115.0 C 233.4 115.1 233.3 115.1 233.1 115.1 L 230.9 115.1 C 230.7 115.1 230.5 115.1 230.4 115.0 C 230.4 114.9 230.3 114.7 230.3 114.5 L 230.3 111.3 L 229.9 111.3 C 229.8 112.5 229.3 113.5 228.6 114.3 C 228.0 115.2 226.9 115.6 225.5 115.6 C 224.4 115.6 223.3 115.2 222.3 114.3 "/><path d="M 246.4 115.0 C 246.3 114.9 246.2 114.8 246.1 114.6 L 241.3 98.4 L 242.7 98.9 L 239 98.9 L 239.9 97.4 L 241.0 97.4 C 241.0 94.7 241.7 92.8 243.0 91.7 C 244.3 90.5 246.3 89.9 249.0 89.8 C 249.2 89.8 249.4 89.9 249.4 90.0 C 249.5 90.0 249.5 90.2 249.5 90.4 L 249.5 92.6 C 249.5 92.8 249.5 93.0 249.4 93.1 C 249.4 93.2 249.2 93.2 249.0 93.2 L 242.6 93.2 L 243.2 92.9 L 250.0 114.6 C 250.1 114.8 250.1 114.9 250.0 115.0 C 250.0 115.1 249.9 115.1 249.7 115.1 L 246.9 115.1 C 246.7 115.1 246.5 115.1 246.4 115.0 M 237.2 115.0 C 237.1 114.9 237.0 114.7 237.0 114.5 L 237.0 84.7 C 237.0 84.4 237.1 84.3 237.2 84.2 C 237.3 84.1 237.4 84.1 237.6 84.1 L 240.0 84.1 C 240.3 84.1 240.4 84.1 240.5 84.2 C 240.6 84.3 240.6 84.4 240.6 84.7 L 240.6 114.5 C 240.6 114.7 240.6 114.9 240.5 115.0 C 240.4 115.1 240.3 115.1 240.0 115.1 L 237.6 115.1 C 237.4 115.1 237.3 115.1 237.2 115.0 "/><path d="M 260.6 110.2 C 261.2 108.6 261.5 106.3 261.5 103.1 C 261.5 100.5 261.4 98.5 261.2 97.0 C 261 95.5 260.6 94.4 260.0 93.7 C 259.5 93.1 258.8 92.8 257.9 92.8 C 256.6 92.8 255.6 93.6 255.0 95.2 C 254.4 96.8 254.1 99.3 254.1 102.6 C 254.1 106.0 254.4 108.5 255.1 110.1 C 255.7 111.7 256.7 112.5 257.9 112.5 C 259.0 112.5 259.9 111.7 260.6 110.2 M 253.7 114.3 C 252.7 113.4 251.9 111.9 251.3 110.0 C 250.8 108.1 250.5 105.7 250.5 102.8 C 250.5 98.3 251.1 94.9 252.3 92.8 C 253.5 90.7 255.0 89.6 256.9 89.6 C 258.1 89.6 259.0 90.0 259.7 90.8 C 260.3 91.5 260.8 92.5 261.0 93.6 L 261.5 93.6 L 261.5 90.6 C 261.5 90.4 261.5 90.2 261.6 90.2 C 261.7 90.1 261.8 90.1 262.0 90.1 L 264.5 90.1 C 264.7 90.1 264.8 90.1 264.9 90.2 C 265.0 90.2 265.0 90.4 265.0 90.6 L 265.0 114.5 C 265.0 114.7 265.0 114.9 264.9 115.0 C 264.8 115.1 264.7 115.1 264.5 115.1 L 262.3 115.1 C 262.1 115.1 261.9 115.1 261.8 115.0 C 261.8 114.9 261.7 114.7 261.7 114.5 L 261.7 111.3 L 261.3 111.3 C 261.2 112.5 260.7 113.5 260.0 114.3 C 259.4 115.2 258.3 115.6 256.9 115.6 C 255.8 115.6 254.7 115.2 253.7 114.3 "/><path d="M 267.1 115.0 C 267.0 114.9 267.0 114.7 267.0 114.5 L 267.0 114.8 C 267.0 114.3 267.0 114.0 267.2 113.6 L 276.4 91.8 L 277.5 93.3 L 268.2 93.3 C 268.0 93.3 267.9 93.2 267.8 93.1 C 267.7 93.0 267.7 92.9 267.7 92.7 L 267.7 90.6 C 267.7 90.4 267.7 90.2 267.8 90.2 C 267.9 90.1 268.0 90.1 268.2 90.1 L 279.7 90.1 C 279.9 90.1 280.1 90.1 280.1 90.2 C 280.2 90.2 280.3 90.4 280.3 90.6 C 280.3 91.1 280.2 91.4 280.0 91.7 L 270.8 113.4 L 269.8 111.9 L 279.6 111.9 C 279.8 111.9 280.0 112.0 280.1 112.0 C 280.1 112.1 280.2 112.3 280.2 112.5 L 280.2 114.5 C 280.2 114.7 280.1 114.9 280.1 115.0 C 280.0 115.1 279.8 115.1 279.6 115.1 L 267.5 115.1 C 267.3 115.1 267.2 115.1 267.1 115.0 "/><path d="M 290.4 113.6 C 289.2 112.3 288.5 110.4 288.5 108.0 C 288.5 107.7 288.5 107.6 288.6 107.5 C 288.7 107.4 288.8 107.4 289.0 107.4 L 291.4 107.4 C 291.6 107.4 291.7 107.4 291.8 107.5 C 291.9 107.6 291.9 107.7 291.9 108.0 C 292.0 109.6 292.4 110.8 293.0 111.5 C 293.6 112.3 294.4 112.6 295.5 112.6 C 296.6 112.6 297.4 112.3 297.9 111.5 C 298.5 110.7 298.7 109.8 298.7 108.7 C 298.7 107.8 298.5 107.0 298.1 106.4 C 297.7 105.7 297.2 105.2 296.6 104.8 C 296.0 104.4 295.2 104.0 294.2 103.5 C 293.0 102.9 292.0 102.4 291.3 101.9 C 290.5 101.4 289.9 100.6 289.4 99.7 C 288.9 98.8 288.6 97.6 288.6 96.2 C 288.6 94.8 288.9 93.6 289.4 92.7 C 289.9 91.7 290.6 90.9 291.6 90.4 C 292.5 89.8 293.7 89.5 295.1 89.5 C 297.1 89.5 298.7 90.1 299.8 91.3 C 300.9 92.4 301.5 94.3 301.6 96.8 C 301.6 97.1 301.6 97.2 301.5 97.3 C 301.5 97.4 301.3 97.4 301.1 97.4 L 298.7 97.4 C 298.5 97.4 298.3 97.4 298.3 97.3 C 298.2 97.2 298.1 97.1 298.1 96.8 C 298.0 95.2 297.7 94.1 297.1 93.5 C 296.5 92.9 295.8 92.5 295.0 92.5 C 294.1 92.5 293.3 92.8 292.8 93.4 C 292.3 94.0 292.1 94.8 292.1 95.7 C 292.1 96.6 292.3 97.3 292.6 97.8 C 293.0 98.4 293.5 98.8 294.0 99.2 C 294.5 99.6 295.3 100.0 296.4 100.5 C 297.6 101.1 298.6 101.7 299.4 102.2 C 300.2 102.7 300.8 103.5 301.4 104.5 C 301.9 105.4 302.2 106.6 302.2 108.1 C 302.2 109.6 301.9 110.9 301.3 112.1 C 300.8 113.2 300.0 114.1 298.9 114.7 C 297.9 115.3 296.7 115.6 295.3 115.6 C 293.2 115.6 291.6 115.0 290.4 113.6 "/><path d="M 306.4 114.5 C 305.8 113.8 305.4 112.8 305.4 111.4 L 305.4 93.3 L 303.7 93.3 C 303.5 93.3 303.4 93.2 303.3 93.1 C 303.2 93.0 303.2 92.9 303.2 92.7 L 303.2 91 C 303.2 90.7 303.2 90.6 303.3 90.5 C 303.4 90.4 303.5 90.3 303.7 90.3 C 304.7 90.0 305.5 89.6 306.0 88.9 C 306.6 88.2 307.0 87.2 307.2 86.0 C 307.2 85.7 307.3 85.6 307.4 85.5 C 307.5 85.4 307.6 85.4 307.8 85.4 L 308.4 85.4 C 308.7 85.4 308.8 85.4 308.9 85.5 C 309.0 85.6 309.0 85.7 309.0 86.0 L 309.0 90.1 L 312.2 90.1 C 312.5 90.1 312.6 90.1 312.7 90.2 C 312.8 90.2 312.8 90.4 312.8 90.6 L 312.8 92.7 C 312.8 92.9 312.8 93.0 312.7 93.1 C 312.6 93.2 312.5 93.3 312.2 93.3 L 309.0 93.3 L 309.0 110.7 C 309.0 111.4 309.2 112 309.7 112.3 C 310.2 112.6 311.0 112.5 312.2 112.1 C 312.4 112.0 312.5 111.9 312.6 112.0 C 312.6 112.0 312.7 112.2 312.7 112.4 L 312.7 114.1 C 312.7 114.3 312.6 114.5 312.6 114.6 C 312.5 114.7 312.4 114.9 312.2 115.0 C 311.4 115.4 310.4 115.6 309.3 115.6 C 308.0 115.6 307.0 115.3 306.4 114.5 "/><path d="M 316.2 114.0 C 315.3 112.9 314.9 111.4 314.9 109.3 L 314.9 90.6 C 314.9 90.4 315.0 90.2 315.0 90.2 C 315.1 90.1 315.3 90.1 315.5 90.1 L 317.9 90.1 C 318.1 90.1 318.3 90.1 318.4 90.2 C 318.4 90.2 318.5 90.4 318.5 90.6 L 318.5 108.2 C 318.5 109.5 318.7 110.5 319.2 111.1 C 319.7 111.8 320.5 112.2 321.4 112.2 C 322.6 112.2 323.4 111.7 323.9 110.9 C 324.4 110.0 324.6 108.8 324.6 107.4 L 324.6 90.6 C 324.6 90.4 324.6 90.2 324.7 90.2 C 324.8 90.1 325.0 90.1 325.2 90.1 L 327.6 90.1 C 327.8 90.1 328.0 90.1 328.1 90.2 C 328.1 90.2 328.2 90.4 328.2 90.6 L 328.2 114.5 C 328.2 114.7 328.1 114.9 328.1 115.0 C 328.0 115.1 327.8 115.1 327.6 115.1 L 325.2 115.1 C 325.0 115.1 324.8 115.1 324.7 115.0 C 324.6 114.9 324.6 114.7 324.6 114.5 L 324.6 111.7 L 324.2 111.7 C 323.8 113.0 323.3 114.0 322.5 114.6 C 321.8 115.2 320.8 115.5 319.7 115.5 C 318.2 115.5 317.0 115.0 316.2 114.0 "/><path d="M 340.9 110.1 C 341.6 108.5 341.9 105.8 341.9 102.2 C 341.9 98.9 341.6 96.5 341.0 95.0 C 340.5 93.4 339.5 92.7 338.2 92.7 C 336.9 92.7 335.9 93.5 335.3 95.1 C 334.7 96.7 334.4 99.2 334.4 102.5 C 334.4 106.0 334.7 108.5 335.4 110.1 C 336.0 111.7 337 112.5 338.2 112.5 C 339.4 112.5 340.3 111.7 340.9 110.1 M 334.0 114.2 C 333.1 113.3 332.3 111.9 331.7 109.9 C 331.1 107.9 330.8 105.4 330.8 102.4 C 330.8 99.4 331.1 96.9 331.6 95.0 C 332.2 93.1 333 91.7 333.9 90.8 C 334.8 90.0 335.9 89.5 337.1 89.5 C 338.3 89.5 339.3 89.9 340.0 90.7 C 340.6 91.5 341.1 92.4 341.4 93.6 L 341.8 93.6 L 341.8 84.7 C 341.8 84.4 341.8 84.3 341.9 84.2 C 342.0 84.1 342.1 84.1 342.3 84.1 L 344.8 84.1 C 345.0 84.1 345.2 84.1 345.2 84.2 C 345.3 84.3 345.3 84.4 345.3 84.7 L 345.3 114.5 C 345.3 114.7 345.3 114.9 345.2 115.0 C 345.2 115.1 345.0 115.1 344.8 115.1 L 342.6 115.1 C 342.4 115.1 342.3 115.1 342.2 115.0 C 342.1 114.9 342.0 114.7 342.0 114.5 L 342.0 111.3 L 341.6 111.3 C 341.5 112.0 341.3 112.7 341.0 113.3 C 340.7 114.0 340.3 114.5 339.6 115.0 C 339.0 115.4 338.3 115.6 337.3 115.6 C 336.1 115.6 335.0 115.2 334.0 114.2 "/><path d="M 348.9 115.0 C 348.8 114.9 348.8 114.7 348.8 114.5 L 348.8 90.6 C 348.8 90.4 348.8 90.2 348.9 90.2 C 349.0 90.1 349.1 90.1 349.3 90.1 L 351.8 90.1 C 352.0 90.1 352.1 90.1 352.2 90.2 C 352.3 90.2 352.3 90.4 352.3 90.6 L 352.3 114.5 C 352.3 114.7 352.3 114.9 352.2 115.0 C 352.1 115.1 352.0 115.1 351.8 115.1 L 349.3 115.1 C 349.1 115.1 349.0 115.1 348.9 115.0 M 348.8 88.0 C 348.3 87.5 348.1 86.9 348.1 86.2 C 348.1 85.4 348.3 84.8 348.8 84.3 C 349.2 83.9 349.8 83.6 350.6 83.6 C 351.4 83.6 352.0 83.9 352.4 84.3 C 352.8 84.8 353.0 85.4 353.0 86.2 C 353.0 86.9 352.8 87.5 352.4 88.0 C 352.0 88.4 351.4 88.6 350.6 88.6 C 349.8 88.6 349.2 88.4 348.8 88.0 "/><path d="M 365.1 110.3 C 365.7 108.8 366.0 106.2 366.0 102.7 C 366.0 99.1 365.7 96.5 365.1 95.0 C 364.6 93.4 363.6 92.7 362.3 92.7 C 360.9 92.7 360.0 93.4 359.4 94.9 C 358.9 96.4 358.6 98.9 358.6 102.3 C 358.6 104.8 358.7 106.8 358.9 108.3 C 359.2 109.8 359.6 110.8 360.1 111.5 C 360.6 112.2 361.4 112.5 362.3 112.5 C 363.6 112.5 364.6 111.8 365.1 110.3 M 357.0 112.7 C 355.6 110.8 355 107.4 355 102.5 C 355 97.8 355.6 94.4 357.0 92.5 C 358.4 90.5 360.1 89.5 362.3 89.5 C 364.5 89.5 366.2 90.5 367.6 92.4 C 369.0 94.3 369.6 97.7 369.6 102.4 C 369.6 107.2 369.0 110.7 367.6 112.7 C 366.2 114.6 364.5 115.6 362.3 115.6 C 360.1 115.6 358.4 114.7 357.0 112.7 "/><path d="M 385.9 106.9 C 385.8 106.9 385.7 106.8 385.6 106.6 L 384.4 104.3 L 384.8 104.1 L 385.4 104.1 L 385.7 103.6 L 385.8 103.6 L 387.4 106.6 C 387.5 106.8 387.6 106.9 387.5 106.9 C 387.5 107.0 387.4 107.0 387.2 107.0 L 386.3 107.0 C 386.1 107.0 386.0 107.0 385.9 106.9 M 385.8 102.5 C 385.8 101.9 385.5 101.7 384.9 101.7 L 383.8 101.7 L 383.8 103.2 L 384.9 103.2 C 385.5 103.2 385.8 103.0 385.8 102.5 M 382.2 106.9 C 382.1 106.8 382.1 106.7 382.1 106.5 L 382.1 100.6 C 382.1 100.4 382.1 100.3 382.2 100.3 C 382.3 100.2 382.4 100.2 382.5 100.2 L 384.9 100.2 C 385.8 100.2 386.4 100.3 386.8 100.7 C 387.3 101.1 387.5 101.6 387.5 102.2 C 387.5 102.9 387.2 103.4 386.8 103.8 C 386.3 104.1 385.7 104.3 384.9 104.3 L 383.8 104.3 L 383.8 106.5 C 383.8 106.7 383.7 106.8 383.7 106.9 C 383.6 107.0 383.5 107.0 383.3 107.0 L 382.5 107.0 C 382.4 107.0 382.3 107.0 382.2 106.9 M 388.2 107.7 C 389.1 106.7 389.5 105.4 389.5 103.6 C 389.5 101.9 389.1 100.5 388.2 99.6 C 387.3 98.7 386.1 98.2 384.6 98.2 C 383.1 98.2 381.9 98.7 381.0 99.6 C 380.1 100.5 379.6 101.9 379.6 103.6 C 379.6 105.4 380.1 106.7 381.0 107.7 C 381.9 108.6 383.1 109.1 384.6 109.1 C 386.1 109.1 387.3 108.6 388.2 107.7 M 381.3 109.5 C 380.3 108.9 379.5 108.1 378.9 107.1 C 378.4 106.1 378.1 104.9 378.1 103.6 C 378.1 102.3 378.4 101.2 378.9 100.2 C 379.5 99.1 380.2 98.3 381.2 97.7 C 382.2 97.2 383.3 96.9 384.6 96.9 C 385.8 96.9 387.0 97.2 388.0 97.7 C 389.0 98.3 389.7 99.1 390.3 100.2 C 390.8 101.2 391.1 102.3 391.1 103.6 C 391.1 104.9 390.8 106.1 390.3 107.1 C 389.7 108.1 389.0 108.9 388.0 109.5 C 387.0 110.1 385.8 110.4 384.6 110.4 C 383.3 110.4 382.2 110.1 381.3 109.5 "/></svg>
+    <h1><svg class="hl" viewBox="62.8 150 466.4 106" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estúdio para marcas que buscam longevidade."><path class="sym" d="M 526.3 189.6 L 504.7 213.3 L 522.4 213.3 C 523.5 213.3 524.3 214.1 524.3 215.3 L 524.3 218.9 C 524.3 220.0 523.5 220.9 522.4 220.9 L 506.7 220.9 C 506.7 220.9 506.0 220.9 506.0 220.9 L 504.2 220.9 C 501.5 220.9 499.3 223.1 499.3 225.8 L 499.3 226.2 C 499.3 227.9 500.2 229.4 501.5 230.3 C 501.8 230.5 502.0 230.6 502.3 230.8 C 504.9 232.9 508.5 234.2 513.0 234.9 C 514.0 235.0 514.5 236.0 514.0 236.8 C 510.2 243.6 503.3 250.3 495.0 250.0 C 487.0 249.6 480.3 243.4 476.6 236.8 C 476.2 236.0 476.7 235.0 477.6 234.9 C 482.4 234.2 486.2 232.7 488.9 230.5 C 489.1 230.3 489.3 230.1 489.4 230 C 490.5 229.0 491.2 227.7 491.2 226.2 L 491.2 225.8 C 491.2 223.0 489.0 220.8 486.3 220.8 L 486.2 220.8 L 486.2 221.0 L 293.3 221.0 L 293.3 213.3 L 486.2 213.3 L 462.3 189.4 C 461.4 188.5 461.4 187.1 462.3 186.1 L 464.4 184.1 C 465.3 183.2 466.8 183.2 467.7 184.1 L 491.6 208.0 L 491.8 184.6 C 491.8 183.5 492.7 182.6 493.8 182.6 L 497.4 182.6 C 498.5 182.6 499.4 183.5 499.4 184.6 L 499.2 208.1 L 520.7 184.5 C 521.5 183.6 523.0 183.5 523.9 184.4 L 526.1 186.3 C 527.1 187.2 527.1 188.7 526.3 189.6 "/><text x="147.03" y="187.1" textLength="106.36" lengthAdjust="spacingAndGlyphs">Estúdio</text><text x="259.71" y="187.1" textLength="67.39" lengthAdjust="spacingAndGlyphs">para</text><text x="333.42" y="187.1" textLength="110.95" lengthAdjust="spacingAndGlyphs">marcas</text><text x="109.36" y="225.8" textLength="54.52" lengthAdjust="spacingAndGlyphs">que</text><text x="170.20" y="225.8" textLength="118.52" lengthAdjust="spacingAndGlyphs">buscam</text><text x="295.04" y="225.8" textLength="187.04" lengthAdjust="spacingAndGlyphs">longevidade.</text></svg></h1>
     <p>Identidades visuais, nomes e presença nas redes sociais para marcas que querem ser reconhecidas à primeira vista.</p>
     <span class="tag">Designer Gráfico · Identidade visual e naming</span>
   </header>
- 
+
   <!-- 2. BOTÕES PRINCIPAIS
        Troque o endereço do site principal quando o domínio akazstudio.com estiver no ar -->
   <nav class="cta" aria-label="Ações principais">
@@ -164,13 +165,13 @@ footer{text-align:center;color:var(--mute);font-size:14px}
     <a class="btn ghost" href="https://superlative-maamoul-a4d31d.netlify.app/#work">Explorar projetos recentes</a>
     -->
   </nav>
- 
+
   <!-- 3. AUTORIDADE -->
   <section class="proof" aria-label="Experiência">
     <b>+7</b>
     <p>anos criando marcas para pequenos negócios e empresas em expansão, do primeiro nome ao manual de uso.</p>
   </section>
- 
+
   <!-- 3. SOLUÇÕES -->
   <section class="sec">
     <h2>Como posso ajudar</h2>
@@ -180,7 +181,7 @@ footer{text-align:center;color:var(--mute);font-size:14px}
       <div class="item"><div><strong>Redes sociais</strong><span>Feeds com identidade e propósito. Direção de arte, campanhas e templates que fazem a sua marca ser reconhecida e lembrada a cada publicação.</span></div></div>
     </div>
   </section>
- 
+
   <!-- 4. CONTATOS E REDES -->
   <section class="sec">
     <h2>Fale comigo</h2>
@@ -209,15 +210,15 @@ footer{text-align:center;color:var(--mute);font-size:14px}
       -->
     </div>
   </section>
- 
+
   <footer>© 2026 AKAZ STUDIO</footer>
 </main>
- 
+
 <!-- Barra fixa: aparece quando o botão principal sai da tela -->
 <div class="dock" id="dock">
   <a class="btn primary" href="https://wa.me/5581982039686?text=Ol%C3%A1!%20Vim%20pelo%20bio-site%20da%20AKAZ%20STUDIO%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicitar proposta</a>
 </div>
- 
+
 <script>
 (function(){
   var b=document.getElementById("cta-main"),d=document.getElementById("dock");
@@ -227,4 +228,3 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 </script>
 </body>
 </html>
- 
