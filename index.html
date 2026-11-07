@@ -51,7 +51,7 @@ h1,h2,h3,p{margin:0}
   padding-top:calc(32px + env(safe-area-inset-top,0px));
   padding-right:max(20px,env(safe-area-inset-right,0px));
   padding-left:max(20px,env(safe-area-inset-left,0px));
-  padding-bottom:calc(120px + env(safe-area-inset-bottom,0px)); /* espaço para a barra fixa */
+  padding-bottom:calc(40px + env(safe-area-inset-bottom,0px));
 }
 
 /* ===== Cabeçalho ===== */
@@ -65,7 +65,6 @@ h1,h2,h3,p{margin:0}
 .tag{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font:700 14px var(--f-display)}
 
 /* ===== Botões principais ===== */
-.cta{display:grid;gap:12px}
 .btn{
   display:flex;align-items:center;justify-content:center;min-height:60px;padding:0 24px;border-radius:999px;
   font:700 18px var(--f-display);transition:transform .15s,background .2s,color .2s;
@@ -104,15 +103,27 @@ h1,h2,h3,p{margin:0}
 .links em{font:700 22px/1 var(--f-display);font-style:normal;letter-spacing:-.04em}
 footer{text-align:center;color:var(--mute);font-size:14px}
 
-/* ===== Barra fixa de ação (aparece ao rolar, na zona do polegar) ===== */
-.dock{
-  position:fixed;left:0;right:0;bottom:0;z-index:10;
-  padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));
-  background:var(--paper);border-top:1px solid var(--line);
-  transform:translateY(110%);visibility:hidden;transition:transform .35s,visibility .35s;
-}
-.dock.on{transform:none;visibility:visible}
-.dock .btn{max-width:480px;margin:0 auto}
+/* ===== Formulário "Solicite sua proposta" (mesma estrutura do site principal) ===== */
+.fm-lead{color:var(--mute);font-size:16px;margin:-4px 0 16px}
+.brief{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:24px 20px;display:grid;gap:22px}
+.brief [hidden]{display:none}
+.brief label.f{display:grid;gap:8px;font:700 16px var(--f-display)}
+.brief .f input,.brief .f select,.brief .f textarea{font:400 17px var(--f-body);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;width:100%;min-height:52px;appearance:none;-webkit-appearance:none}
+.brief .f select{background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.brief .f textarea{resize:vertical}
+.brief .f input:focus,.brief .f select:focus,.brief .f textarea:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.brief fieldset{border:0;margin:0;padding:0}
+.brief legend{font:700 16px var(--f-display);margin-bottom:10px;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip label{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border:2px solid var(--ink);border-radius:999px;font:500 16px var(--f-body);cursor:pointer;transition:background .2s,color .2s}
+.chip input:checked+label{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.chip input:focus-visible+label{outline:3px solid var(--accent);outline-offset:3px}
+.brief .btn{border:0;cursor:pointer;width:100%}
+#msg{margin:0;min-height:1.4em;font-weight:500;font-size:15px}
+#msg.err{color:#b3261e}
+#msg.ok a{color:var(--ink);text-decoration:underline}
 
 /* ===== Efeito de passar o mouse: só em dispositivos com mouse ===== */
 @media (hover:hover){
@@ -125,7 +136,6 @@ footer{text-align:center;color:var(--mute);font-size:14px}
 @media (min-width:700px){
   body{background:var(--card)}
   .page{margin:40px auto;padding:48px 32px 40px;background:var(--paper);border:1px solid var(--line);border-radius:40px}
-  .dock{display:none}
 }
 
 /* ===== Celulares pequenos ===== */
@@ -154,15 +164,6 @@ footer{text-align:center;color:var(--mute);font-size:14px}
     <span class="tag">Designer Gráfico · Identidade visual e naming</span>
   </header>
 
-  <!-- 2. BOTÕES PRINCIPAIS
-       Troque o endereço do site principal quando o domínio akazstudio.com estiver no ar -->
-  <nav class="cta" aria-label="Ações principais">
-    <a class="btn primary" id="cta-main" href="https://wa.me/5581982039686?text=Ol%C3%A1!%20Vim%20pelo%20bio-site%20da%20AKAZ%20STUDIO%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicitar proposta</a>
-    <!-- Desativado por enquanto (para reativar, apague esta linha e a de fechamento):
-    <a class="btn ghost" href="https://superlative-maamoul-a4d31d.netlify.app/#work">Explorar projetos recentes</a>
-    -->
-  </nav>
-
   <!-- 3. AUTORIDADE -->
   <section class="proof" aria-label="Experiência">
     <b>+7</b>
@@ -179,7 +180,33 @@ footer{text-align:center;color:var(--mute);font-size:14px}
     </div>
   </section>
 
-  <!-- 4. CONTATOS E REDES -->
+  <!-- 4. FORMULÁRIO (mesma estrutura do site principal) -->
+  <section class="sec" id="proposta">
+    <h2>Solicite sua proposta</h2>
+    <p class="fm-lead">Responda algumas perguntas sobre o seu negócio. Retorno com os próximos passos em até dois dias úteis.</p>
+    <form id="brief" class="brief" novalidate>
+      <label class="f">Seu nome<input name="nome" autocomplete="name" required></label>
+      <label class="f">E-mail<input type="email" name="email" autocomplete="email" inputmode="email" placeholder="voce@empresa.com" required></label>
+      <label class="f">WhatsApp<input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(81) 90000-0000" required></label>
+      <fieldset><legend>Você já tem o nome da empresa?</legend><div class="chips"><span class="chip"><input type="radio" id="n1" name="tem_nome" value="Sim" checked><label for="n1">Sim, já tenho</label></span><span class="chip"><input type="radio" id="n2" name="tem_nome" value="Não"><label for="n2">Ainda não, preciso de um nome</label></span></div></fieldset>
+      <label class="f" id="nomeBox">Qual é o nome da empresa?<input name="empresa"></label>
+      <label class="f">Conte sobre a empresa<textarea name="sobre" rows="4" placeholder="O que ela faz, para quem e em qual cidade atua"></textarea></label>
+      <fieldset><legend>Quais serviços você precisa?</legend><div class="chips"><span class="chip"><input type="checkbox" id="s1" name="servico" value="Identidade visual"><label for="s1">Identidade visual</label></span><span class="chip"><input type="checkbox" id="s2" name="servico" value="Naming"><label for="s2">Naming</label></span><span class="chip"><input type="checkbox" id="s3" name="servico" value="Redes sociais"><label for="s3">Redes sociais</label></span><span class="chip"><input type="checkbox" id="s4" name="servico" value="Ainda não sei"><label for="s4">Ainda não sei</label></span></div></fieldset>
+      <label class="f">Nível de investimento
+        <select name="invest" required>
+          <option value="">Selecione uma faixa</option>
+          <option>De R$ 3.000 a R$ 5.000</option>
+          <option>De R$ 5.000 a R$ 10.000</option>
+          <option>De R$ 10.000 a R$ 20.000</option>
+          <option>Acima de R$ 20.000</option>
+        </select>
+      </label>
+      <button class="btn primary" type="submit">Enviar pelo WhatsApp</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </section>
+
+  <!-- 5. CONTATOS E REDES -->
   <section class="sec">
     <h2>Fale comigo</h2>
     <div class="links">
@@ -211,16 +238,26 @@ footer{text-align:center;color:var(--mute);font-size:14px}
   <footer>© 2026 AKAZ STUDIO</footer>
 </main>
 
-<!-- Barra fixa: aparece quando o botão principal sai da tela -->
-<div class="dock" id="dock">
-  <a class="btn primary" href="https://wa.me/5581982039686?text=Ol%C3%A1!%20Vim%20pelo%20bio-site%20da%20AKAZ%20STUDIO%20e%20gostaria%20de%20solicitar%20uma%20proposta." target="_blank" rel="noopener">Solicitar proposta</a>
-</div>
-
 <script>
+/* Formulário: envia as respostas para o WhatsApp. O número é lido do link do WhatsApp em "Fale comigo". */
 (function(){
-  var b=document.getElementById("cta-main"),d=document.getElementById("dock");
-  if(!b||!d||!("IntersectionObserver" in window))return;
-  new IntersectionObserver(function(e){d.classList.toggle("on",!e[0].isIntersecting)}).observe(b);
+  var f=document.getElementById("brief");if(!f)return;
+  var wa=document.querySelector('a[href*="wa.me/"]'),num=((wa&&wa.getAttribute("href")||"").match(/wa\.me\/(\d+)/)||[])[1]||"5581982039686";
+  var nb=document.getElementById("nomeBox"),m=document.getElementById("msg");
+  f.addEventListener("change",function(e){if(e.target.name==="tem_nome")nb.hidden=e.target.value!=="Sim"});
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var d=new FormData(f),sv=d.getAll("servico"),nome=(d.get("nome")||"").trim(),em=(d.get("email")||"").trim(),zap=(d.get("whatsapp")||"").trim();
+    var bad=!nome?"nome":!/^\S+@\S+\.\S+$/.test(em)?"email":zap.replace(/\D/g,"").length<10?"whatsapp":!sv.length?"servico":!d.get("invest")?"invest":"";
+    if(bad){
+      m.className="err";m.textContent="Preencha seu nome, um e-mail válido, o WhatsApp com DDD, ao menos um serviço e o nível de investimento.";
+      var t=f.elements[bad];(t.tagName?t:t[0]).focus();return;
+    }
+    var body="Olá! Vim pelo bio-site da AKAZ STUDIO e gostaria de solicitar uma proposta.\n\nNome: "+nome+"\nE-mail: "+em+"\nWhatsApp: "+zap+"\nJá possui nome: "+(d.get("tem_nome")||"Não informado")+(d.get("tem_nome")==="Sim"&&(d.get("empresa")||"").trim()?"\nNome da empresa: "+d.get("empresa").trim():"")+"\nSobre a empresa: "+((d.get("sobre")||"").trim()||"Não informado")+"\nServiços: "+sv.join(", ")+"\nInvestimento: "+d.get("invest");
+    var url="https://wa.me/"+num+"?text="+encodeURIComponent(body);
+    m.className="ok";m.innerHTML='Abrindo o WhatsApp com a sua mensagem. Se não abrir, <a href="'+url+'" target="_blank" rel="noopener">toque aqui</a>.';
+    var a=document.createElement("a");a.href=url;a.target="_blank";a.rel="noopener";a.click();
+  });
 })();
 </script>
 </body>
